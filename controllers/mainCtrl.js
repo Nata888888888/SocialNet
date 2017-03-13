@@ -1,7 +1,7 @@
 app.controller('mainCtrl', mainCtrl);
-mainCtrl.$inject = ["registerFactory"];
+mainCtrl.$inject = ["usersFactory"];
 
-function mainCtrl(registerFactory) {
+function mainCtrl(usersFactory) {
     this.addInfo = function() {
         this.showAdd = true;
     }
@@ -9,6 +9,6 @@ function mainCtrl(registerFactory) {
         location.replace("#/login");
     }
     this.saveInfo = function(index) {
-        registerFactory.db[index].phone = this.phone;
+        usersFactory.users[index].phone = this.phone;
     }
 }
