@@ -1,0 +1,45 @@
+<!--ng-controller="mainCtrl as main"-->
+<div id="main" ng-controller="mainCtrl as main" >   
+    <div>
+   <div class="header">
+    <p class="bg-info">Hello</p>
+       <button type="button" class="btn btn-default btn-xs" ng-click="main.logOut()"><span class="glyphicon glyphicon-log-out"></span>LogOut</button>
+    </div>
+    <div class="main">
+        <div class="leftSide"><img src="http://sakralnoe.com/assets/images/kartinki/Net_foto.jpg" alt="">
+        <button type="button" class="btn btn-primary">Change</button>
+        <p class="bg-info">Friends:</p>
+            <button type="button" class="btn btn-primary">Add Friends</button>
+        </div>
+        <div class="rightSide">
+            <p class="bg-info">{{}}</p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+            <button type="button" class="btn btn-primary" ng-click="main.addInfo()">Add information</button>
+           <p> <input type="text"></p>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+           <p> <button type="button" class="btn btn-primary">Відправити</button></p>
+        </div>
+    </div>
+    
+</div>
+<div ng-show="main.showAdd">
+    <p>Phone number</p>
+    <input type="text" placeholder="Enter phone" ng-model="main.phone">
+    <p>Country</p>
+    <input type="text" placeholder="Enter country" ng-model="main.country">
+    <p>Skype</p>
+    <input type="text" placeholder="Enter skype" ng-model="main.skype">
+    <p>City</p>
+    <input type="text" placeholder="City" ng-model="main.city">
+    <p>GitHub</p>
+    <input type="text" placeholder="Enter GitHub" ng-model="main.gitHub">  
+    <p>Description</p>
+    <textarea name="" id="" cols="30" rows="10" ng-model="main.description"></textarea>
+    <button ng-click="main.saveInfo()">Save</button>
+</div>
+</div>
